@@ -32,7 +32,7 @@ variable "users" {
 
   type = list(object({
     name     = string
-    password = string
+    password = optional(string, null)
     quota    = optional(list(object({
       interval_duration = string
       queries           = optional(number, null)
